@@ -38,21 +38,20 @@ app.post("/", (req, res) =>{
         text: `Name: ${name}\nE-mail: ${email}\nPhone: ${phone} \nSubject: "New Contact form Submission"\nMessage: ${message}`
     };
 
-    transporter.sendMail(mailOptions, (err, info)=>{
-        if (err){
-            console.log(err);
-            res.send(`${name} ${phone}${email}`)
-        }
-        else{
-            console.log("Email send:", info.response);
-            res.status(200).send(`
-                <script>
-                    alert("Thanks for contacting. Please wait for response.");
-                    window.location.href = "/contact.html";
-                </script>
-            `);
-        }
+    transporter.sendMail(mailOptions)
+    .then(info => {
+        console.log("Email send:", info.response);
+        res.status(200).send(`
+            <script>
+                alert("Thanks for contacting. Please wait for a response.");
+                window.location.href = "/contact.html";
+            </script>
+        `);
     })
+    .catch(err => {
+        console.error(err);
+        res.status(500).send("Error while sending emails.");
+    });
 })
 
 app.listen(PORT, ()=>{
