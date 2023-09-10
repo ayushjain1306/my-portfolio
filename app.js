@@ -50,7 +50,7 @@ app.post("/", (req, res) =>{
     })
     .catch(err => {
         console.error(err);
-        res.status(500).send("Error while sending emails.");
+        res.status(500).send(error);
     });
 })
 
