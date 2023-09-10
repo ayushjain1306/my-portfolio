@@ -17,33 +17,18 @@ app.get("/:page", (req, res) => {
     res.sendFile(__dirname + `/style/${page}.html`);
 });
 
-app.post("/", async (req, res) =>{
+app.post("/", (req, res) =>{
     const message = req.body.description;
     const name = req.body.name;
     const phone = req.body.phone;
     const email = req.body.email;
 
     var transporter = nodemailer.createTransport({
-        port: 465,
-        host: 'smtp.gmail.com',
+        service: 'gmail',
         auth: {
             user: process.env.email,
             pass: process.env.pass
-        },
-        secure: true,
-    })
-
-    await new Promise((resolve, reject)=>{
-        transporter.verify(function (error, success){
-            if (error){
-                console.log(error);
-                reject(error);
-            }
-            else {
-                console.log("Server is ready to take messages.");
-                resolve(success);
-            }
-        })
+        }
     })
 
     var mailOptions ={
@@ -53,23 +38,20 @@ app.post("/", async (req, res) =>{
         text: `Name: ${name}\nE-mail: ${email}\nPhone: ${phone} \nSubject: "New Contact form Submission"\nMessage: ${message}`
     };
 
-    await new Promise((resolve, reject)=>{
-        transporter.sendMail(mailOptions, (err, info)=>{
-            if (error){
-                res.status(500).send(error);
-            }
-            else{
-                console.log("Email send:", info.response);
-                res.status(200).send(`
-                    <script>
-                        alert("Thanks for contacting. Please wait for a response.");
-                        window.location.href = "/contact.html";
-                    </script>
-                `);
-            }
-        })
+    transporter.sendMail(mailOptions)
+    .then(info => {
+        console.log("Email send:", info.response);
+        res.status(200).send(`
+            <script>
+                alert("Thanks for contacting. Please wait for a response.");
+                window.location.href = "/contact.html";
+            </script>
+        `);
     })
-
+    .catch(err => {
+        console.error(err);
+        res.status(500).send("Error while sending emails.");
+    });
 })
 
 app.listen(PORT, ()=>{
