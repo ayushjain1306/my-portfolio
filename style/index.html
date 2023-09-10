@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush - Developer Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link class="logo" rel="shortcut icon" href="images/me.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                My Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a class="home" href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, I am <span class="purple">Ayush Jain</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="images/developer.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h2>My Skills</h2>
+            <div class="insideSecond">
+                <div>
+                    <img src="images/html.png" alt="">
+                    <h4 class = "text-language">HTML</h4>
+                </div>
+                <div>
+                    <img src="images/css.png" alt="">
+                    <h4 class = "text-language">CSS</h4>
+                </div>
+                <div>
+                    <img src="images/javascript.png" alt="">
+                    <h4 class = "text-language">JavaScript</h4>
+                </div>
+                <div>
+                    <img src="images/java.png" alt="">
+                    <h4 class = "text-language">Java</h4>
+                </div>
+                <div>
+                    <img src="images/react.png" alt="">
+                    <h4 class = "text-language">React</h4>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <h2>Projects</h2>
+            <div class="insideThird">
+                <div>
+                    <img src="images/project-1.png" alt="">
+                    <h4 class="text-language">Weather Website</h4>
+                    <p>A dynamic website which is related to weather. It will return the current and the accurate temperature of the location <span class="dot">. . .</span> <span class="content">entered by the user. It is my first project which is completely based on HTML, CSS and JavaScript.</span></p>
+                    <button class="button" onclick="moreLess()">Read More</button>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+        <hr>
+        <section class="fourthSection">
+            <h2>My Services</h2>
+            <div class="insideFourth-1">
+                <div>
+                    <h4>Static Website Development</h4>
+                    <p>Designing staright forward static websites that ensures seamless navigation for you visitors.</p>
+                </div>
+                <div>
+                    <h4>Dynamic Website Development</h4>
+                    <p>Building interactive dynamic websites that provide fluid and enjoyable user journey.</p>
+                </div>
+                <div>
+                    <h4>Responsive Web Development</h4>
+                    <p>Developing responsive websites that ensures optimal user experiences across all devices.</p>
+                </div>
+            </div>
+            <div class="insideFourth-2">
+                <div>
+                    <h4>React based Web Development</h4>
+                    <p>Developing mordern web applications with React for enhanced functionality and user interaction.</p>
+                </div>
+                <div>
+                    <h4>Java based Android Applications</h4>
+                    <p>Creating efficient and responsive Android applications using the power of Java.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <div class = "image">
+            <img src="images/me.jpg" alt="">
+            <h3>Ayush Jain</h3>
+        </div>
+        <div class="contact">
+            <a href="https://www.facebook.com/profile.php?id=100072097902877" target="_blank"><img src="images/facebook.png" alt=""></a>
+            <a href="https://instagram.com/itz_ashu.1306?utm_source=qr&igshid=MzNINGNkZWQ4Mg%3D%3D" target="_blank"><img src="images/instagram.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/ayush-jain-7b193622b" target="_blank"><img src="images/linkedin.png" alt=""></a>
+        </div>
+        <div class ="copyright"></div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Android Developer', 'React Developer', 'Web Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    border-radius: 50%;
+}
+
+body {
+    background-color: rgb(0,0,33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0px 0px 8px 8px rgba(255, 255, 255, 0.466);
+    background-color: rgba(1, 1, 33, 0.339);
+}
+
+nav ul{
+    display: flex;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.home {
+    color: grey;
+}
+
+nav ul li a:hover{
+    color: rgb(122, 122, 235);
+    font-size: 1.02rem;
+}
+
+.left {
+    font-size: 2.0rem;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.firstSection > div {
+    width: 35%;
+}
+
+.leftSection {
+    font-size: 2.6rem;
+}
+
+.rightSection img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.purple{
+    color: blueviolet;
+}
+
+#element{
+    color: blueviolet;
+}
+
+.secondSection{
+    width: 86%;
+    margin: auto;
+    font-size: 23px;
+    text-align: center;
+}
+
+.secondSection h2{
+    margin: 30px;
+}
+
+.insideSecond {
+    display: flex;
+    justify-content: space-around;
+}
+
+.insideSecond div img{
+    height: 120px;
+    width: 120px;
+}
+
+main hr {
+    border: 1px solid whitesmoke;
+    margin: 50px 60px;
+}
+
+.thirdSection {
+    width: 86%;
+    margin: auto;
+    font-size: 23px;
+    text-align: center;
+}
+
+.thirdSection h2{
+    margin: 30px;
+}
+
+.insideThird{
+    display: flex;
+    justify-content: space-around;
+}
+
+.insideThird div{
+    width: 33%;
+}
+
+.insideThird img{
+    height: 117px;
+    width: 208px;
+}
+
+p, span > .insideThird {
+    font-size: 12px;
+    text-align: justify;
+}
+
+
+.content{
+    display: none;
+}
+
+.button{
+    border-radius: 0px;
+    background-color: rgba(128, 128, 128, 0.452);
+    color: white;
+    border: none;
+    height: 26px;
+    width: 90px;
+}
+
+.text-language{
+    text-align: center;
+}
+
+.fourthSection{
+    width: 86%;
+    margin: auto;
+    font-size: 23px;
+    text-align: center;
+}
+
+.fourthSection h2{
+    margin: 30px;
+}
+
+.insideFourth-1, .insideFourth-2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.insideFourth-1 div{
+    width: 20%;
+    background-color: whitesmoke;
+    color:rgb(0, 0, 33);
+    margin: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.insideFourth-2 div{
+    width: 21%;
+    background-color: whitesmoke;
+    color:rgb(0, 0, 33);
+    margin: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.insideFourth-1 p, .insideFourth-2 p{
+    padding: 10px;
+}
+
+footer .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0px 20px;
+}
+
+footer .contact{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.contact img{
+    height: 40px;
+    width: 40px;
+    margin: 10px 20px;
+    margin-bottom: 0px;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-device-width: 300px) and (max-device-width: 640px){
+    header{
+        width: 100%;
+    }
+    nav {
+        display: block;
+        text-align: center;
+        height: 100%;
+    }
+    .left{
+        padding: 10px 0px;
+    }
+
+    .right{
+        padding-bottom: 10px;
+    }
+
+    .right ul{
+        justify-content: center;
+    }
+
+    .firstSection{
+        flex-direction: column-reverse;
+    }
+
+    .firstSection > div{
+        width: 70%;
+    }
+
+    .insideSecond div img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .insideSecond div h4{
+        font-size: 17px;
+    }
+
+    .insideThird{
+        display: block;
+    }
+
+    .insideThird div{
+        width: 60%;
+        margin: auto;
+    }
+
+    .insideThird img{
+        width: 100%;
+    }
+
+    .insideFourth-1{
+        display: block;
+    }
+
+    .insideFourth-1 div{
+        width: 70%;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    .insideFourth-2{
+        display: block;
+    }
+
+    .insideFourth-2 div{
+        width: 70%;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    footer img{
+        height: 30px;
+        width: 30px;
+        margin: 0px 10px;
+    }
+
+    footer h3{
+        font-size: 15px;
+    }
+
+    .copyright{
+        font-size: 15px;
+    }
+
+    main hr{
+        margin: 50px 40px;
+    }
+}

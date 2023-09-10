@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link class="logo" rel="shortcut icon" href="images/me.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                My Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a class="home" href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="leftSide">
+                <h1>Let's Start A Project</h1>
+                <h1>Together</h1>
+            </div>
+            <div class="rightSide">
+                <form id="myform" action="/" method="post">
+                    <input type="text" name="name" id="name" placeholder="Enter your name" onchange="checkName()" required><br>
+                    <p id="error1" class="error"></p>
+                    <input type="number" name="phone" id="phone" onchange="checkPhone()" placeholder="Enter your Phone Number" required><br>
+                    <p id="error2" class="error"></p>
+                    <input type="email" name="email" id="email" placeholder="Enter your E-Mail ID" required><br>
+                    <textarea name="description" cols="40" rows="5" id="textarea" placeholder="How may I help you?" required></textarea><br>
+                    <button type="submit" id="submit">Submit</button>
+                    <button type="reset" id="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+    </main>
+    <footer>
+        <div class = "image">
+            <img src="images/me.jpg" alt="">
+            <h3>Ayush Jain</h3>
+        </div>
+        <div class="contact">
+            <a href="https://www.facebook.com/profile.php?id=100072097902877" target="_blank"><img src="images/facebook.png" alt=""></a>
+            <a href="https://instagram.com/itz_ashu.1306?utm_source=qr&igshid=MzNINGNkZWQ4Mg%3D%3D" target="_blank"><img src="images/instagram.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/ayush-jain-7b193622b" target="_blank"><img src="images/linkedin.png" alt=""></a>
+        </div>
+        <div class ="copyright"></div>
+    </footer>
+    <script src="contactScript.js"></script>
+</body>
+</html>
